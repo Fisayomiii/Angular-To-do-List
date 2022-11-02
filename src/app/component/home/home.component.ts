@@ -19,6 +19,10 @@ export class HomeComponent implements OnInit {
     console.log(this.userArray);
   }
 
+  delete(id:number) {
+    this.userArray = this.userArray.filter((user:any, index:any)=>index!=id);
+  }
+
   // getUser(id:any) {
   //   this.user = this.userArray.find((user:any, index:any)=>index!=id);
   // }
@@ -26,9 +30,5 @@ export class HomeComponent implements OnInit {
   // edit(id:number) {
   //   // let editDetails = { firstname: this.firstname, lastname: this.lastname, email: this.email, password: this.password };
   //   // this.userArray[id] (editDetails);
-  // }
-
-  // delete(id:number) {
-  //   this.userArray = this.userArray.filter((user:any, index:any)=>index!=id);
   // }
 }

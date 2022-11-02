@@ -17,15 +17,14 @@
 
         <div class="list" *ngFor="let id=index; let todo of userArray" >
           <ul class="numandtodo">
-            <li><h3>{{id + 1}}.</h3></li>
-            <li class="todo"><h3>{{todo.todoitem}}</h3></li>
+            <li><h5>{{id + 1}}.</h5></li>
+            <li class="todo"><h5>{{todo.todoitem}}</h5></li>
           </ul>
           <ul class="deleteditlist">
-            <li><button type="submit" class="delbtn">Delete</button></li>
+            <li (click)="delete(id)"><button class="delbtn">Delete</button></li>
             <li><button type="submit" class="editbtn">Edit</button></li>
           </ul>
         </div>
     </div>
-
   </section>
 </main>
